@@ -30,7 +30,7 @@ namespace ShopRUs.Web.Controllers
 
         // POST: api/Invoice
         [HttpPost]
-        public async Task<ActionResult<InvoiceDTO>> Post([FromBody] InvoiceDTO bill)
+        public async Task<ActionResult> Post([FromBody] InvoiceDTO bill)
         {
             if (!ModelState.IsValid)
             {

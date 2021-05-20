@@ -39,7 +39,8 @@ namespace ShopRUs.Infrastructure.Data.EntityConfigurations
                 Id = 4,
                 DiscountAppliesTo = "General",
                 DiscountValueType = "Value",
-                DiscountValue = 5
+                DiscountValue = 5,
+                Units = 100
             }
             );
         }

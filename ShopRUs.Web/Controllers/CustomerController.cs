@@ -50,8 +50,12 @@ namespace ShopRUs.Web.Controllers
 
         // POST: api/Customer
         [HttpPost]
-        public async Task<ActionResult<CustomerDTO>> Post([FromBody] CustomerDTO customer)
+        public async Task<ActionResult> Post([FromBody] CustomerDTO customer)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var record = await _customerService.CreateCustomer(customer);
             return CreatedAtAction(nameof(GetById), new { id = record.Id }, record);
         }

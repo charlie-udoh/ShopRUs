@@ -1,5 +1,4 @@
-﻿using ShopRUs.Core.Entities;
-using ShopRUs.Web.Models;
+﻿using ShopRUs.Web.Models;
 using System.Threading.Tasks;
 
 namespace ShopRUs.Web.Services

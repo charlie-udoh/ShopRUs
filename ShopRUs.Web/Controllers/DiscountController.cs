@@ -50,8 +50,12 @@ namespace ShopRUs.Web.Controllers
 
         // POST: api/Discount
         [HttpPost]
-        public async Task<ActionResult<DiscountDTO>> Post([FromBody] DiscountDTO discount)
+        public async Task<ActionResult> Post([FromBody] DiscountDTO discount)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var record = await _discountService.CreateDiscount(discount);
             return CreatedAtAction(nameof(GetById), new { id = record.Id }, record);
         }

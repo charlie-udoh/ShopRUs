@@ -153,7 +153,7 @@ namespace ShopRUs.Infrastructure.Data.Migrations
                             DiscountAppliesTo = "General",
                             DiscountValue = 5m,
                             DiscountValueType = "Value",
-                            Units = 0m
+                            Units = 100m
                         });
                 });
 
